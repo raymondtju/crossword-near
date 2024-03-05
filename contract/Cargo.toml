@@ -1,0 +1,26 @@
+[package]
+name = "crossword-near"
+version = "1.0.0"
+authors = ["Raymond Tju <raymond.rtju@gmail.com>"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+hex = "0.4.3"
+near-sdk = "4.0.0-pre.4"
+
+[dev-dependencies]
+tokio = { version = "1.36.0", features = ["full"] }
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
+
+[workspace]
+members = []
