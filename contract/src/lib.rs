@@ -21,6 +21,10 @@ impl Contract {
         PUZZLE_NUMBER
     }
 
+    pub fn get_solution(&self) -> String {
+        self.crossword_solution.clone()
+    }
+
     // Comment it so setter was not public
     // fn set_solution(&mut self, solution: String) {
     //     self.crossword_solution = solution
